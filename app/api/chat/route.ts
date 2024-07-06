@@ -54,7 +54,7 @@ export async function POST(req: Request) {
         messages: [...ragPrompt, ...messages],
       }
     );
-    const stream = OpenAIStream(response);
+    const   stream = OpenAIStream(response);
     return new StreamingTextResponse(stream);
   } catch (e) {
     throw e;
